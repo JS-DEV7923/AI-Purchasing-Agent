@@ -1,3 +1,22 @@
 docs/ai/
 docs/architecture/
 docs/engineering/
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+*secret*.json
+*secrets*.json
+*credential*.json
+*credentials*.json
+secrets.*
+credentials.*
+.npmrc
+.yarnrc.yml
