@@ -73,12 +73,30 @@ The implementation follows the approved docs under `docs/`:
 - Mutable state is in memory and reset by the evaluation runner.
 - `idempotencyKey` is supported for agent review and action execution.
 
+## Deploy on Vercel
+
+This project is configured for Vercel as a plain Node.js HTTP server:
+
+- `src/server.js` is the server entrypoint Vercel captures.
+- `vercel.json` selects the "Other" framework preset and includes `public/**` in the function bundle.
+- No build step is required.
+
+Recommended Vercel project settings:
+
+- Framework Preset: Other
+- Build Command: leave empty
+- Output Directory: leave empty
+- Install Command: default is fine
+
 ## Configuration
 
-Copy `.env.example` if desired. Current variables:
+No production environment variables are required for the current implementation.
 
-- `PORT`: HTTP port, default `3000`.
-- `AI_EXPLANATION_MODE`: currently `template`; reserved for future optional LLM explanation mode.
+Vercel manages the runtime port automatically. Locally, `PORT` is optional and defaults to `3000`:
+
+```bash
+PORT=4000 npm start
+```
 
 ## Known Limitations
 

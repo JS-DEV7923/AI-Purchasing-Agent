@@ -81,7 +81,11 @@ async function serveStatic(req, res, url) {
   res.end(data);
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+function shouldListen() {
+  return process.argv[1] === fileURLToPath(import.meta.url) || process.env.VERCEL === "1";
+}
+
+if (shouldListen()) {
   const port = Number(process.env.PORT || 3000);
   createApp().listen(port, () => {
     console.log(`AI Purchasing Agent running at http://localhost:${port}`);
