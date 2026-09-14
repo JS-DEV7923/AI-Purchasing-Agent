@@ -1,0 +1,15 @@
+{
+  "name": "ai-purchasing-agent",
+  "version": "1.0.0",
+  "description": "Local full-stack demo for an auditable AI purchasing recommendation agent.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "evaluate": "node scripts/run-evaluation.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Purchasing Agent</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>AI Purchasing Agent</h1>
+        <p>Auditable recommendation review, action, and validation.</p>
+      </div>
+      <button id="runEvaluation">Run Evaluation</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Recommendations</h2>
+          <span id="count" class="muted"></span>
+        </div>
+        <div id="recommendations" class="list"></div>
+      </section>
+
+      <section class="workspace">
+        <section class="panel" id="detailPanel">
+          <div class="panel-heading">
+            <h2>Review</h2>
+            <button id="runReview" disabled>Run Agent</button>
+          </div>
+          <div id="detail" class="empty">Select a recommendation to inspect operational context.</div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Decision & Action</h2>
+            <button id="executeAction" disabled>Create PO</button>
+          </div>
+          <div id="decision" class="empty">No agent run yet.</div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Evaluation</h2>
+          </div>
+          <div id="evaluation" class="empty">Run the deterministic scenario suite from here or with <code>npm run evaluate</code>.</div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
