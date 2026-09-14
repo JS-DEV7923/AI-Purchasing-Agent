@@ -14,7 +14,13 @@ npm start
 
 Open `http://localhost:3000` after starting the app.
 
-No package install is required because the project uses Node's built-in HTTP server and test runner.
+No package install is required because the project uses Node's built-in HTTP server and test runner. If `npm` is not available in your shell, use the equivalent direct commands:
+
+```bash
+node --test
+node scripts/run-evaluation.js
+node src/server.js
+```
 
 ## What Is Implemented
 
